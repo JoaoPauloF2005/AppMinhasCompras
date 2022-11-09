@@ -19,8 +19,15 @@ namespace AppMinhasCompras.View
 
         private void ToolbarItem_Clicked_Novo(object sender, EventArgs e)
         {
-            Navigation.PushAsync(new NovoProduto());
-        } 
+            try
+            {
+                Navigation.PushAsync(new NovoProduto());
+
+            }catch(Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK"); 
+            }
+        }   
 
         private void ToolbarItem_Clicked_Somar(object sender, EventArgs e)
         {
