@@ -18,7 +18,7 @@ namespace AppMinhasCompras.View
             InitializeComponent();
         }
 
-        private void ToolbarItem_Clicked(object sender, EventArgs e)
+        private async void ToolbarItem_Clicked(object sender, EventArgs e)
         {
             try
             {
@@ -29,14 +29,18 @@ namespace AppMinhasCompras.View
                     Preco = Convert.ToDouble(txt_preco.Text),
                 };
 
-                App.Database.Insert(p);
+                await App.Database.Insert(p);
+
+                await DisplayAlert("Sucesso!", "Produto Cadastrado", "OK");
+
+                await Navigation.PushAsync(new Listagem());
 
                 //Navigation.PushAsync(new NovoProduto());
 
             }
             catch (Exception ex)
             {
-                DisplayAlert("Ops", ex.Message, "OK");
+               await DisplayAlert("Ops", ex.Message, "OK");
             }
         }
     }
