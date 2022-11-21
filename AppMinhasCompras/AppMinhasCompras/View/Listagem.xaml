@@ -22,9 +22,9 @@
                     <ListView.Header>
                         <Grid RowDefinitions="Auto"
                               ColumnDefinitions="3*, *, *">
-                            <Label Grid.Row="0" Grid.Column="0" Text="Descrição"/>
-                            <Label Grid.Row="0" Grid.Column="1" Text="QNT"/>
-                            <Label Grid.Row="0" Grid.Column="2" Text="Preço"/>
+                            <Label Grid.Row="0" Grid.Column="0"  FontAttributes="Bold" Text="DESCRIÇÃO"/>
+                            <Label Grid.Row="0" Grid.Column="1"  FontAttributes="Bold" Text="QNT" />
+                            <Label Grid.Row="0" Grid.Column="2"  FontAttributes="Bold" Text="PREÇO"/>
                         </Grid>
                     </ListView.Header>
 

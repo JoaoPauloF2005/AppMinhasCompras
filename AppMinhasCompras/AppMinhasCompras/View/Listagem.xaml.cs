@@ -39,9 +39,10 @@ namespace AppMinhasCompras.View
         {
             double soma = lista_produtos.Sum(i => i.Preco * i.Quantidade);
 
-            string msg = "O total da compra é: " + soma;
+            string msg = "O total da compra é: " + soma.ToString("C");
 
             DisplayAlert("Ops", msg, "OK");
+
 
         }
 
